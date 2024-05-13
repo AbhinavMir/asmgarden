@@ -1,0 +1,35 @@
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    margin: 40px;
+}
+header, footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333333; /* Darker grey background */
+    color: #ffffff; /* White text */
+}
+main {
+    background-color: #242424; /* Even darker background */
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #444444; /* Lighter border for visibility */
+}
+a {
+    color: #4a86e8; /* Bright blue for links */
+}
+code {
+    background-color: #333333; /* Background for code blocks */
+    color: #ffffff; /* White text for code */
+    padding: 5px;
+    display: block;
+    white-space: pre-wrap; /* Handles line breaks */
+}
+inlinecode {
+    background-color: #333333; /* Background for code blocks */
+    color: #ffffff; /* White text for code */
+    padding: 5px;
+    white-space: pre-wrap; /* Handles line breaks */
+}
