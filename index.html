@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>asmgarden</title>
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <header>
-        <h1><img src="https://web.archive.org/web/20091026205934im_/http://hk.geocities.com/fishballchung/tree.gif" alt="dancing cow gif"/>Welcome to asmgarden</h1>
+        <h1><img src="https://web.archive.org/web/20091026205934im_/http://hk.geocities.com/fishballchung/tree.gif"
+                alt="dancing cow gif" />Welcome to asmgarden</h1>
         <p>A place to practice x86 assembly</p>
     </header>
     <main>
         <h2>About asmgarden</h2>
-        <p>Asm Garden, or assembly garden, is best described as leetcode-for-assembly. Running a competetive coding platform, and a nice UI around it is wasteful - given my assumption that if you end up here, you don't care much about coding interview rounds or competing with other people who leetcode. For that reason, how you'll work through this is run a local docker image provided below, and then run a command to check if you assembly code is correct. The questions will start at hello world, and have things like writing a small game, building GUI, a simple HTTP protocol, some cryptopals-esque problems, a few questions from Euler, and more. You can contribute by going to the github linked below.</p>
-        
+        <p>Asm Garden, or assembly garden, is best described as leetcode-for-assembly. Running a competetive coding
+            platform, and a nice UI around it is wasteful - given my assumption that if you end up here, you don't care
+            much about coding interview rounds or competing with other people who leetcode. For that reason, how you'll
+            work through this is run a local docker image provided below, and then run a command to check if you
+            assembly code is correct. The questions will start at hello world, and have things like writing a small
+            game, building GUI, a simple HTTP protocol, some cryptopals-esque problems, a few questions from Euler, and
+            more. You can contribute by going to the github linked below.</p>
+
         <h2>How to use</h2>
-        <p>First, you need to have Docker installed. Then, you can run the following command to start the asmgarden container:</p>
-        
+        <p>First, you need to have Docker installed. Then, you can run the following command to start the asmgarden
+            container:</p>
+
         <code>docker run --rm -v $(pwd)/student_solutions:/asmcode abhinavmir/asmgarden $question_number$ $answer$.asm</code>
         <p>Example:</p>
         <code>docker run --rm -v $(pwd)/student_solutions:/asmcode abhinavmir/asmgarden 001 hello.asm</code>
@@ -26,18 +36,22 @@
         <code>└── student_solutions
             ├── hello.asm
         </code>
-        <p>The solutions go inside <inlinecode>student_solutions</inlinecode> folder of wherever you're running from.</p>
+        <p>The solutions go inside <inlinecode>student_solutions</inlinecode> folder of wherever you're running from.
+        </p>
         <h2>Questions</h2>
         <li><a href="/questions/001.html">Hello World</a></li>
         <li>More coming soon!</li>
         <h2>Contributing</h2>
 
-        You can open PRs to <a href="https://github.com/AbhinavMir/asmgarden/pulls">this repo</a> to add more questions, or improve the existing ones. You can also open issues to suggest new features, or report bugs. Add solutions in <inlinecode>problems</inlinecode> directory and make sure to label the question as incrementally the next one. 
+        You can open PRs to <a href="https://github.com/AbhinavMir/asmgarden/pulls">this repo</a> to add more questions,
+        or improve the existing ones. You can also open issues to suggest new features, or report bugs. Add solutions in
+        <inlinecode>problems</inlinecode> directory and make sure to label the question as incrementally the next one.
     </main>
 
- 
+
     <footer>
         <p>&copy; 2024 asmgarden. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

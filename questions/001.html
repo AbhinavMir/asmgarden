@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question 001: Hello World</title>
     <link rel="stylesheet" href="../main.css">
 </head>
+
 <body>
     <header>
         <h1>asmgarden: Question 001</h1>
@@ -14,26 +16,30 @@
     <main>
         <h2>Objective</h2>
         <p>Write a basic x86 assembly program that prints "Hello, World!" to the console.</p>
-        
+
         <h2>Background</h2>
-        <p>The "Hello, World!" program is a classic introductory program in programming. It's often used to introduce the basic syntax of a programming language.</p>
-        
+        <p>The "Hello, World!" program is a classic introductory program in programming. It's often used to introduce
+            the basic syntax of a programming language.</p>
+
         <h2>Task</h2>
-        <p>Your task is to write an x86 assembly program that uses system calls to print "Hello, World!" to the standard output (console).</p>
-        
+        <p>Your task is to write an x86 assembly program that uses system calls to print "Hello, World!" to the standard
+            output (console).</p>
+
         <h2>Requirements</h2>
         <ul>
             <li>The program must compile and run on an x86 Linux system.</li>
-            <li>Only use system calls; do not use external libraries like <inlinecode>printf</inlinecode> from libc.</li>
+            <li>Only use system calls; do not use external libraries like <inlinecode>printf</inlinecode> from libc.
+            </li>
             <li>The program should exit cleanly returning zero.</li>
         </ul>
-        
+
         <h2>Solution</h2>
-<button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'">
-    Show/Hide Solution
-</button>
-<div style="display:none;">
-<pre><code>
+        <button
+            onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'">
+            Show/Hide Solution
+        </button>
+        <div style="display:none;">
+            <pre><code>
 section .data
     hello db 'Hello, World!',0xA   ; 'Hello, World!' plus a linefeed character
     helloLen equ $ - hello         ; Length of the 'Hello, World!' string
@@ -52,18 +58,21 @@ _start:
     xor ebx, ebx                   ; Return 0 status on exit
     int 0x80                       ; Call the kernel
 </code></pre>
-</div>
+        </div>
 
 
         <h2>Assembly and Execution</h2>
         <ol>
             <li>Write and save your solution in <inlinecode>student_solutions</inlinecode> directory. </li>
             <li>Name the file <inlinecode>hello.asm</inlinecode>.</li>
-            <li>From the parent directory, test it with <inlinecode>docker run --rm -v $(pwd)/student_solutions:/asmcode abhinavmir/asmgarden 001 hello.asm<inlinecode></li>
+            <li>From the parent directory, test it with <inlinecode>docker run --rm -v $(pwd)/student_solutions:/asmcode
+                    abhinavmir/asmgarden 001 hello.asm<inlinecode>
+            </li>
         </ol>
     </main>
     <footer>
         <p>&copy; 2024 asmgarden. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
