@@ -7,22 +7,37 @@
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
-            background-color: #f0f0f0;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text */
             margin: 40px;
         }
         header, footer {
             text-align: center;
             padding: 10px;
-            background-color: #dedede;
+            background-color: #333333; /* Darker grey background */
+            color: #ffffff; /* White text */
         }
         main {
-            background-color: #fff;
+            background-color: #242424; /* Even darker background */
             padding: 20px;
             margin: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #444444; /* Lighter border for visibility */
         }
         a {
-            color: #0645ad;
+            color: #4a86e8; /* Bright blue for links */
+        }
+        code {
+            background-color: #333333; /* Background for code blocks */
+            color: #ffffff; /* White text for code */
+            padding: 5px;
+            display: block;
+            white-space: pre-wrap; /* Handles line breaks */
+        }
+        inlinecode {
+            background-color: #333333; /* Background for code blocks */
+            color: #ffffff; /* White text for code */
+            padding: 5px;
+            white-space: pre-wrap; /* Handles line breaks */
         }
     </style>
 </head>
@@ -38,13 +53,24 @@
         <h2>How to use</h2>
         <p>First, you need to have Docker installed. Then, you can run the following command to start the asmgarden container:</p>
         
+        <code>docker run --rm -v $(pwd)/student_solutions:/asmcode abhinavmir/asmgarden $question_number$ $answer$.asm</code>
+        <p>Example:</p>
+        <code>docker run --rm -v $(pwd)/student_solutions:/asmcode abhinavmir/asmgarden 001 hello.asm</code>
 
-        <h2>Get Involved</h2>
-        <p>Join the asmgarden community today and start contributing to the world of low-level programming!</p>
+        <p>Make sure you store your solutions as such:</p>
+        <code>└── student_solutions
+            ├── hello.asm
+        </code>
+        <p>The solutions go inside <inlinecode>student_solutions</inlinecode> folder of wherever you're running from.</p>
+        <h2>Questions</h2>
+        <li><a href="/questions/001">Hello World</a></li>
+        
+        <h2>Contributing</h2>
+
+        You can open PRs to <a href="https://github.com/AbhinavMir/asmgarden/pulls">this repo</a> to add more questions, or improve the existing ones. You can also open issues to suggest new features, or report bugs. Add solutions in <inlinecode>problems</inlinecode> directory and make sure to label the question as incrementally the next one. 
     </main>
     <footer>
         <p>&copy; 2024 asmgarden. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
