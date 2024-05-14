@@ -1,0 +1,240 @@
+
+arit:     file format elf32-i386
+
+
+Disassembly of section .interp:
+
+00000154 <.interp>:
+ 154:	2f                   	das    
+ 155:	6c                   	insb   (%dx),%es:(%edi)
+ 156:	69 62 2f 6c 64 2d 6c 	imul   $0x6c2d646c,0x2f(%edx),%esp
+ 15d:	69 6e 75 78 2e 73 6f 	imul   $0x6f732e78,0x75(%esi),%ebp
+ 164:	2e 32 00             	xor    %cs:(%eax),%al
+
+Disassembly of section .note.gnu.build-id:
+
+00000168 <.note.gnu.build-id>:
+ 168:	04 00                	add    $0x0,%al
+ 16a:	00 00                	add    %al,(%eax)
+ 16c:	14 00                	adc    $0x0,%al
+ 16e:	00 00                	add    %al,(%eax)
+ 170:	03 00                	add    (%eax),%eax
+ 172:	00 00                	add    %al,(%eax)
+ 174:	47                   	inc    %edi
+ 175:	4e                   	dec    %esi
+ 176:	55                   	push   %ebp
+ 177:	00 4f 51             	add    %cl,0x51(%edi)
+ 17a:	a8 6a                	test   $0x6a,%al
+ 17c:	98                   	cwtl   
+ 17d:	dc 94 7f 4a ec d5 29 	fcoml  0x29d5ec4a(%edi,%edi,2)
+ 184:	b3 e8                	mov    $0xe8,%bl
+ 186:	7c e0                	jl     168 <printf@plt-0xea8>
+ 188:	3b 14 ff             	cmp    (%edi,%edi,8),%edx
+ 18b:	da                   	.byte 0xda
+
+Disassembly of section .gnu.hash:
+
+0000018c <.gnu.hash>:
+ 18c:	01 00                	add    %eax,(%eax)
+ 18e:	00 00                	add    %al,(%eax)
+ 190:	01 00                	add    %eax,(%eax)
+ 192:	00 00                	add    %al,(%eax)
+ 194:	01 00                	add    %eax,(%eax)
+	...
+
+Disassembly of section .dynsym:
+
+000001a4 <.dynsym>:
+	...
+ 1b4:	01 00                	add    %eax,(%eax)
+	...
+ 1be:	00 00                	add    %al,(%eax)
+ 1c0:	12 00                	adc    (%eax),%al
+	...
+
+Disassembly of section .dynstr:
+
+000001c4 <.dynstr>:
+ 1c4:	00 70 72             	add    %dh,0x72(%eax)
+ 1c7:	69 6e 74 66 00 6c 69 	imul   $0x696c0066,0x74(%esi),%ebp
+ 1ce:	62 63 2e             	bound  %esp,0x2e(%ebx)
+ 1d1:	73 6f                	jae    242 <printf@plt-0xdce>
+ 1d3:	2e 36 00 47 4c       	cs add %al,%ss:0x4c(%edi)
+ 1d8:	49                   	dec    %ecx
+ 1d9:	42                   	inc    %edx
+ 1da:	43                   	inc    %ebx
+ 1db:	5f                   	pop    %edi
+ 1dc:	32 2e                	xor    (%esi),%ch
+ 1de:	30 00                	xor    %al,(%eax)
+
+Disassembly of section .gnu.version:
+
+000001e0 <.gnu.version>:
+ 1e0:	00 00                	add    %al,(%eax)
+ 1e2:	02 00                	add    (%eax),%al
+
+Disassembly of section .gnu.version_r:
+
+000001e4 <.gnu.version_r>:
+ 1e4:	01 00                	add    %eax,(%eax)
+ 1e6:	01 00                	add    %eax,(%eax)
+ 1e8:	08 00                	or     %al,(%eax)
+ 1ea:	00 00                	add    %al,(%eax)
+ 1ec:	10 00                	adc    %al,(%eax)
+ 1ee:	00 00                	add    %al,(%eax)
+ 1f0:	00 00                	add    %al,(%eax)
+ 1f2:	00 00                	add    %al,(%eax)
+ 1f4:	10 69 69             	adc    %ch,0x69(%ecx)
+ 1f7:	0d 00 00 02 00       	or     $0x20000,%eax
+ 1fc:	12 00                	adc    (%eax),%al
+ 1fe:	00 00                	add    %al,(%eax)
+ 200:	00 00                	add    %al,(%eax)
+	...
+
+Disassembly of section .rel.dyn:
+
+00000204 <.rel.dyn>:
+ 204:	2a 10                	sub    (%eax),%dl
+ 206:	00 00                	add    %al,(%eax)
+ 208:	08 00                	or     %al,(%eax)
+ 20a:	00 00                	add    %al,(%eax)
+ 20c:	2f                   	das    
+ 20d:	10 00                	adc    %al,(%eax)
+ 20f:	00 02                	add    %al,(%edx)
+ 211:	01 00                	add    %eax,(%eax)
+	...
+
+Disassembly of section .rel.plt:
+
+00000214 <.rel.plt>:
+ 214:	fc                   	cld    
+ 215:	2f                   	das    
+ 216:	00 00                	add    %al,(%eax)
+ 218:	07                   	pop    %es
+ 219:	01 00                	add    %eax,(%eax)
+	...
+
+Disassembly of section .plt:
+
+00001000 <printf@plt-0x10>:
+    1000:	ff b3 04 00 00 00    	push   0x4(%ebx)
+    1006:	ff a3 08 00 00 00    	jmp    *0x8(%ebx)
+    100c:	00 00                	add    %al,(%eax)
+	...
+
+00001010 <printf@plt>:
+    1010:	ff a3 0c 00 00 00    	jmp    *0xc(%ebx)
+    1016:	68 00 00 00 00       	push   $0x0
+    101b:	e9 e0 ff ff ff       	jmp    1000 <printf@plt-0x10>
+
+Disassembly of section .text:
+
+00001020 <_start>:
+    1020:	b8 28 00 00 00       	mov    $0x28,%eax
+    1025:	83 c0 02             	add    $0x2,%eax
+    1028:	50                   	push   %eax
+    1029:	68 00 30 00 00       	push   $0x3000
+    102e:	e8 fc ff ff ff       	call   102f <_start+0xf>
+    1033:	83 c4 08             	add    $0x8,%esp
+    1036:	b8 01 00 00 00       	mov    $0x1,%eax
+    103b:	31 db                	xor    %ebx,%ebx
+    103d:	cd 80                	int    $0x80
+
+Disassembly of section .dynamic:
+
+00002f20 <_DYNAMIC>:
+    2f20:	01 00                	add    %eax,(%eax)
+    2f22:	00 00                	add    %al,(%eax)
+    2f24:	08 00                	or     %al,(%eax)
+    2f26:	00 00                	add    %al,(%eax)
+    2f28:	f5                   	cmc    
+    2f29:	fe                   	(bad)  
+    2f2a:	ff 6f 8c             	ljmp   *-0x74(%edi)
+    2f2d:	01 00                	add    %eax,(%eax)
+    2f2f:	00 05 00 00 00 c4    	add    %al,0xc4000000
+    2f35:	01 00                	add    %eax,(%eax)
+    2f37:	00 06                	add    %al,(%esi)
+    2f39:	00 00                	add    %al,(%eax)
+    2f3b:	00 a4 01 00 00 0a 00 	add    %ah,0xa0000(%ecx,%eax,1)
+    2f42:	00 00                	add    %al,(%eax)
+    2f44:	1c 00                	sbb    $0x0,%al
+    2f46:	00 00                	add    %al,(%eax)
+    2f48:	0b 00                	or     (%eax),%eax
+    2f4a:	00 00                	add    %al,(%eax)
+    2f4c:	10 00                	adc    %al,(%eax)
+    2f4e:	00 00                	add    %al,(%eax)
+    2f50:	15 00 00 00 00       	adc    $0x0,%eax
+    2f55:	00 00                	add    %al,(%eax)
+    2f57:	00 03                	add    %al,(%ebx)
+    2f59:	00 00                	add    %al,(%eax)
+    2f5b:	00 f0                	add    %dh,%al
+    2f5d:	2f                   	das    
+    2f5e:	00 00                	add    %al,(%eax)
+    2f60:	02 00                	add    (%eax),%al
+    2f62:	00 00                	add    %al,(%eax)
+    2f64:	08 00                	or     %al,(%eax)
+    2f66:	00 00                	add    %al,(%eax)
+    2f68:	14 00                	adc    $0x0,%al
+    2f6a:	00 00                	add    %al,(%eax)
+    2f6c:	11 00                	adc    %eax,(%eax)
+    2f6e:	00 00                	add    %al,(%eax)
+    2f70:	17                   	pop    %ss
+    2f71:	00 00                	add    %al,(%eax)
+    2f73:	00 14 02             	add    %dl,(%edx,%eax,1)
+    2f76:	00 00                	add    %al,(%eax)
+    2f78:	11 00                	adc    %eax,(%eax)
+    2f7a:	00 00                	add    %al,(%eax)
+    2f7c:	04 02                	add    $0x2,%al
+    2f7e:	00 00                	add    %al,(%eax)
+    2f80:	12 00                	adc    (%eax),%al
+    2f82:	00 00                	add    %al,(%eax)
+    2f84:	10 00                	adc    %al,(%eax)
+    2f86:	00 00                	add    %al,(%eax)
+    2f88:	13 00                	adc    (%eax),%eax
+    2f8a:	00 00                	add    %al,(%eax)
+    2f8c:	08 00                	or     %al,(%eax)
+    2f8e:	00 00                	add    %al,(%eax)
+    2f90:	16                   	push   %ss
+    2f91:	00 00                	add    %al,(%eax)
+    2f93:	00 00                	add    %al,(%eax)
+    2f95:	00 00                	add    %al,(%eax)
+    2f97:	00 1e                	add    %bl,(%esi)
+    2f99:	00 00                	add    %al,(%eax)
+    2f9b:	00 0c 00             	add    %cl,(%eax,%eax,1)
+    2f9e:	00 00                	add    %al,(%eax)
+    2fa0:	fb                   	sti    
+    2fa1:	ff                   	(bad)  
+    2fa2:	ff 6f 01             	ljmp   *0x1(%edi)
+    2fa5:	00 00                	add    %al,(%eax)
+    2fa7:	08 fe                	or     %bh,%dh
+    2fa9:	ff                   	(bad)  
+    2faa:	ff 6f e4             	ljmp   *-0x1c(%edi)
+    2fad:	01 00                	add    %eax,(%eax)
+    2faf:	00 ff                	add    %bh,%bh
+    2fb1:	ff                   	(bad)  
+    2fb2:	ff 6f 01             	ljmp   *0x1(%edi)
+    2fb5:	00 00                	add    %al,(%eax)
+    2fb7:	00 f0                	add    %dh,%al
+    2fb9:	ff                   	(bad)  
+    2fba:	ff 6f e0             	ljmp   *-0x20(%edi)
+    2fbd:	01 00                	add    %eax,(%eax)
+    2fbf:	00 fa                	add    %bh,%dl
+    2fc1:	ff                   	(bad)  
+    2fc2:	ff 6f 01             	ljmp   *0x1(%edi)
+	...
+
+Disassembly of section .got:
+
+00002ff0 <_GLOBAL_OFFSET_TABLE_>:
+    2ff0:	20 2f                	and    %ch,(%edi)
+	...
+    2ffa:	00 00                	add    %al,(%eax)
+    2ffc:	16                   	push   %ss
+    2ffd:	10 00                	adc    %al,(%eax)
+	...
+
+Disassembly of section .data:
+
+00003000 <output>:
+    3000:	25                   	.byte 0x25
+    3001:	64 0a 00             	or     %fs:(%eax),%al

@@ -19,7 +19,7 @@
 
         <h2>Background</h2>
         <p>The "Hello, World!" program is a classic introductory program in programming. It's often used to introduce
-            the basic syntax of a programming language.</p>
+            the basic syntax of a programming language. Make sure to look how what <inlinecode>int x80</inlinecode> means, it's important! And look up what "clean exits" mean too!</p>
 
         <h2>Task</h2>
         <p>Your task is to write an x86 assembly program that uses system calls to print "Hello, World!" to the standard
@@ -40,6 +40,7 @@
         </button>
         <div style="display:none;">
             <pre><code>
+
 section .data
     hello db 'Hello, World!',0xA   ; 'Hello, World!' plus a linefeed character
     helloLen equ $ - hello         ; Length of the 'Hello, World!' string
@@ -65,8 +66,7 @@ _start:
         <ol>
             <li>Write and save your solution in <inlinecode>student_solutions</inlinecode> directory. </li>
             <li>Name the file <inlinecode>hello.asm</inlinecode>.</li>
-            <li>From the parent directory, test it with <inlinecode>docker run --rm -v $(pwd)/student_solutions:/asmcode
-                    abhinavmir/asmgarden 001 hello.asm<inlinecode>
+            <li>From the parent directory, test it with <inlinecode>docker run --rm -v $(pwd)/student_solutions:/asmcode abhinavmir/asmgarden 001 hello.asm<inlinecode>
             </li>
         </ol>
     </main>

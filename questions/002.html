@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 002: Basic Arithmetic</title>
+    <link rel="stylesheet" href="../main.css">
+</head>
+
+<body>
+    <header>
+        <h1>asmgarden: Question 002</h1>
+        <p>Introduction to x86 Assembly: Basic Arithmetic Operations</p>
+    </header>
+    <main>
+        <h2>Objective</h2>
+        <p>Write an x86 assembly program that performs arithmetic operations (addition, subtraction, multiplication, and division) and displays the results. DO NOT WORRY ABOUT INPUTS! Work with the numbers 20 and 10.</p>
+        <h2>Sample Output</h2>
+        <code>
+            Result: 30
+            10
+            200
+            202
+            202
+            </code>
+
+            
+        <h2>Background</h2>
+        <p>This is trickier than you think. You **might** need to learn how functions work in x86. You could use syscalls to print the solutions, but a better way to do it is to use libc functions - specifically <inlinecode>printf</inlinecode>. The next exercise we will learn how to write a minimal printing function akin to printf, but for this exercise, it is important to learn how to link these together. Since you're using Docker to pass the tests, you won't have access to the commands we use to link the C lib, but rest assured, the command won't change from the usual in most modern operating systems. Hint: Look at the extern keyword. </p>
+
+
+        <p>If you decide to stretch this to do mul, sub, div, a good guide to the internals is presented <a href="https://www.cs.virginia.edu/~evans/cs216/guides/x86.html">here</a>. </p>
+
+        <h2>Task</h2>
+        <p>Your task is to write an x86 assembly program that performs:
+            <ul>
+                <li>Addition of two numbers</li>
+            </ul>
+            The results should be printed to the console.
+        </p>
+
+        <h2>Requirements</h2>
+        <ul>
+            <li>You can use either system calls or libc.</li>
+            <li>The program should exit cleanly returning zero.</li>
+        </ul>
+
+        <h2>Solution</h2>
+        <button
+            onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'">
+            Show/Hide Solution
+        </button>
+        <div style="display:none;">
+            <code>section .data
+                output db "Result: %d", 10, 0  ; Format string for printf, including newline
+            
+            section .text
+                global main
+                extern printf
+            
+            main:
+                mov eax, 40   ; Load 40 into EAX
+                add eax, 2    ; Add 2 to EAX
+            
+                push eax      ; Push result on stack as argument for printf
+                push output   ; Push format string address
+                call printf   ; Call printf to print the result
+                add esp, 8    ; Clean up the stack (2 arguments * 4 bytes each)
+            
+                ; Exit the program
+                mov eax, 0    ; Return 0 as exit status
+                ret           ; Return from main
+            </code>
+        </div>
+
+        <h2>Assembly and Execution</h2>
+        <ol>
+            <li>Write and save your solution in <inlinecode>student_solutions</inlinecode> directory.</li>
+            <li>Name the file <inlinecode>arithmetic.asm</inlinecode>.</li>
+            <li>From the parent directory, test it with <inlinecode>docker run --rm -v $(pwd)/student_solutions:/asmcode abhinavmir/asmgarden 002 arithmetic.asm</inlinecode>.</li>
+        </ol>
+    </main>
+    <footer>
+        <p>&copy; 2024 asmgarden. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
